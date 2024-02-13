@@ -29,8 +29,9 @@ git clone https://github.com/open-mmlab/mmdetection.git
 cd mmdetection
 pip install -e .
 cd ../..
-pip install -e . #build DefectionDetection
+pip install -e . #build Defect-Detection
 ```
+
 
 5. (Optional) Connect to your `ClearML` account 
 If you don't wan't to use `ClearML`, please refer to [Visualizer](../README.md)
