@@ -6,14 +6,14 @@ Oil and surface defects detection
 For detailed procedure, please refer to [Installation](packages/installation.md)
 
 
-## training
+## Training
 ```shell
-python tools/train.py /home/human/Defect-Detection/configs/detr/detr_18.py --work-dir work_dirs/detr --exp 1
+python tools/train.py configs/detr/detr_18.py --work-dir work_dirs/detr --exp 1
 ```
 
+## Testing
 
 
 
 
-
-### Visualizer
+### Visualizers
