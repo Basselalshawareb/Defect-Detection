@@ -8,12 +8,7 @@ from mmengine.registry import RUNNERS
 from mmengine.runner import Runner
 
 from mmdet.utils import setup_cache_size_limit_of_dynamo
-import sys
-
-
-parent_dir = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(parent_dir)
-
+from wrappers import *
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')
