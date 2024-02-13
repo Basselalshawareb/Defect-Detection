@@ -1,20 +1,34 @@
 # Defect-Detection
 Oil and surface defects detection
 
+- [x] NEU_DET dataset
+- [ ] oil dataset
+
+The datasets will be used with augmented angles to imitate the view of quadcopter
+
+**NEU_DET**
+Samples of synthetically rotated images
+
+![image1](resources/101.jpg) &nbsp;&nbsp;&nbsp;&nbsp; ![image2](resources/11.jpg)
+
 
 ## Installation
+
 For detailed procedure, please refer to [Installation](packages/installation.md)
 
 
 ## Training
 ```shell
-python tools/train.py configs/detr/detr_18.py --work-dir work_dirs/detr --exp 1
+python tools/train.py configs/detr/detr_101.py --work-dir work_dirs/detr --exp 1
 ```
 
 ## Testing
 ```shell
-python tools/test.py configs/detr/detr_18.py  work_dirs/detr/ --work-dir work_dirs/detr/test_results --show-dir work_dirs/detr/test_results
+python tools/test.py configs/detr/detr_101.py  work_dirs/detr/ --work-dir work_dirs/detr/test_results
 ```
+
+## Results Analysis
+
 
 
 
@@ -45,3 +59,4 @@ python tools/test.py configs/detr/detr_18.py  work_dirs/detr/ --work-dir work_di
 
 
 ### Visualizers
+Comming soon
