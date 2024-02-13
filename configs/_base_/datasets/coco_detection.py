@@ -1,7 +1,7 @@
 # dataset settings
 dataset_type = 'CocoDataset'
 data_root = 'data/coco/'
-classes = ('crazing','inclusion','patches','pitted_surface','rolled-in_scale','scratches')
+
 # Example to use different file client
 # Method 1: simply set the data root and let the file I/O module
 # automatically infer from prefix (not support LMDB and Memcache yet)
@@ -35,14 +35,13 @@ test_pipeline = [
                    'scale_factor'))
 ]
 train_dataloader = dict(
-    batch_size=1,
+    batch_size=2,
     num_workers=2,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),
     batch_sampler=dict(type='AspectRatioBatchSampler'),
     dataset=dict(
         type=dataset_type,
-        metainfo=dict(classes=classes),
         data_root=data_root,
         ann_file='annotations/instances_train2017.json',
         data_prefix=dict(img='train2017/'),
@@ -57,7 +56,6 @@ val_dataloader = dict(
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
         type=dataset_type,
-        metainfo=dict(classes=classes),
         data_root=data_root,
         ann_file='annotations/instances_val2017.json',
         data_prefix=dict(img='val2017/'),
