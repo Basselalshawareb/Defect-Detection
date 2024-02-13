@@ -16,7 +16,7 @@ class NEUDETDataset(CocoDataset):
 
     METAINFO = {
         'classes': ("crazing","inclusion","patches", "pitted_surface","rolled-in_scale","scratches"),
-        'palette': [(220, 20, 60), (119, 11, 32), (0, 0, 142), (0, 0, 230)]
+        'palette': [(220, 20, 60), (119, 11, 32), (0, 0, 142), (0, 0, 230), (0, 200, 30), (100, 200, 150)]
     }
 
 @DATASETS.register_module()
