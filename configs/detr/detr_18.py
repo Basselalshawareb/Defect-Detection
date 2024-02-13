@@ -1,6 +1,9 @@
 _base_ = [
     '../_base_/datasets/NEUDET_detection.py', '../_base_/runtime_all_hooks.py'
 ]
+
+num_classes = 6
+
 model = dict(
     type='DETR',
     num_queries=100,
@@ -65,7 +68,7 @@ model = dict(
     positional_encoding=dict(num_feats=128, normalize=True),
     bbox_head=dict(
         type='DETRHead',
-        num_classes=80,
+        num_classes=num_classes,
         embed_dims=256,
         loss_cls=dict(
             type='CrossEntropyLoss',
